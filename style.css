@@ -3,7 +3,7 @@
 body{
     margin: 0;
     font-family: "Inter";
-    background: #f7f7f7;
+   
 }
 header{
     background: #fff;
@@ -38,7 +38,7 @@ nav h2{
 
 .author-bio-header {
     display: grid;
-    gap: 32px;
+    gap: 30px;
     grid-template-columns: auto 1fr;
 }
 
@@ -48,10 +48,52 @@ nav h2{
     display: block;
     height: auto;
     margin: 0;
-    width: 180px;
+    width: 120px;
   }
   
+.author-bio-header > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}  
 
+.author-bio-header__headline {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: inherit;
+}
+
+.author-bio-header__headline h1 {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0;
+    padding: 2px 12px 2px 0;
+}
+
+h1 ~ .author-bio-header__job-title {
+    border-left: 1px solid #e7e7e7;
+    padding-left: 12px;
+}
+
+.author-bio-header__job-title ~ .author-bio-header__works-for::before {
+    content: " — ";
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 2px 0;
+  }
+.author-bio-header__works-for {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .author-bio-header__author-description {
+    color:#7f7e7e;
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
 @media screen and (max-width : 960px) {
 }
 
