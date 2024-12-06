@@ -33,7 +33,7 @@ nav h2{
 .author-bio-container {
     margin: 0 auto;
     padding: 20px;
-    width:1150px;
+    max-width:1150px;
 }
 
 .author-bio-header {
@@ -48,7 +48,7 @@ nav h2{
     display: block;
     height: auto;
     margin: 0;
-    width: 120px;
+    width: 140px;
   }
   
 .author-bio-header > div:nth-child(2) {
@@ -121,11 +121,29 @@ h1 ~ .author-bio-header__job-title {
     width: 20px;
 }
 
+hr::before {
+    background: #e7e7e7;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -.5px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+hr {
+    background: transparent;
+    border: none;
+    height: 32px;
+    margin: 16px 0;
+    position: relative;
+    width: 100%;
+  }
+
 @media screen and (max-width : 960px) {
 }
 
-@media screen and (max-width : 620px) {
-    
+@media screen and (max-width : 780px) {    
 
     nav{
         grid-template-columns: repeat(4,1fr);
@@ -134,4 +152,35 @@ h1 ~ .author-bio-header__job-title {
         grid-column:1 / span 4;
         grid-row: 1;
     }
+    .author-bio-header {
+        gap: 24px;
+        grid-template-columns: 1fr;
+    }
+
+    .author-bio-header > div:first-child img {
+        display: block;
+        margin: 0 auto;
+        max-width: 180px;
+    }
+    .author-bio-header > div:nth-child(2) {
+        display: flex ;
+        flex-direction: column;     
+        text-align: justify;  
+    }
+    
+    .author-bio-header__headline {       
+        display: block;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .author-bio-header__headline h1 {
+        display: block;
+        width: 100%;
+    }
+
+    h1 ~ .author-bio-header__job-title {
+        border-left: 0;
+        padding: 2px 0;
+      }
 }
