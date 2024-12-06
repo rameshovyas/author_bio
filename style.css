@@ -89,11 +89,38 @@ h1 ~ .author-bio-header__job-title {
     font-weight: 400;
   }
 
-  .author-bio-header__author-description {
+.author-bio-header__author-description {
     color:#7f7e7e;
     font-size: 18px;
     line-height: 1.5rem;
   }
+
+.author-bio-header__social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.author-bio-header__social-links a {
+    align-items: center;
+    border-radius: 50%;
+    color: #333;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 5px;
+    transition: all .1s ease-in-out;
+    width: 32px;
+}
+
+.author-bio-header__social-links a svg {
+    fill: currentColor;
+    height: 20px;
+    transition: all 0s;
+    width: 20px;
+}
+
 @media screen and (max-width : 960px) {
 }
 
